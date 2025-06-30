@@ -152,12 +152,7 @@ const Index = () => {
                 Eastern University in 2024, where I developed a deep passion for ensuring software excellence 
                 and innovation.
               </p>
-              <p className="text-gray-600 leading-relaxed">
-                As an Independent AI/ML Developer & Researcher, I focus on developing cutting-edge AI/ML models, 
-                conducting research, and contributing to the advancement of intelligent systems. My thesis work 
-                on "Quantum Neural Networks vs. Classical Models" demonstrates my commitment to exploring 
-                emerging technologies.
-              </p>
+              <p className="text-gray-600 leading-relaxed">As an Independent AI/ML  and Python Developer & Researcher, I focus on developing cutting-edge AI/ML models, conducting research, and contributing to the advancement of intelligent systems. My thesis work on "Quantum Neural Networks vs. Classical Models" demonstrates my commitment to exploring emerging technologies.</p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mt-1">
