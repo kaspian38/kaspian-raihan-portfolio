@@ -105,7 +105,7 @@ const Index = () => {
                 <Button onClick={() => scrollToSection("projects")} className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105">
                   View My Work <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-                <Button onClick={() => scrollToSection("contact")} variant="outline" className="border-white/30 text-white hover:bg-white/10 px-8 py-3 rounded-full text-lg font-medium transition-all duration-300">
+                <Button onClick={() => scrollToSection("contact")} variant="outline" className="border-white/30 hover:bg-white/10 px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 text-amber-400">
                   Get In Touch
                 </Button>
               </div>
