@@ -140,7 +140,7 @@ const Index = () => {
             <div>
               <div className="relative">
                 <div className="w-full h-96 rounded-2xl overflow-hidden shadow-lg">
-                  <img alt="Md. Kaspian Raihan" src="/lovable-uploads/24ff7aca-f609-485f-a025-4fdca64a6e70.png" className="w-full h-full object-fill" />
+                  <img alt="Md. Kaspian Raihan" className="w-full h-full object-fill" src="/lovable-uploads/3fba86f9-f37d-424d-88b3-9bbb6ae6f68a.png" />
                 </div>
               </div>
             </div>
