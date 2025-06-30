@@ -117,9 +117,7 @@ const Index = () => {
                     <img src="https://i.postimg.cc/KzCJCvfF/245482619-1013790496141550-6785660270570192208-n.jpg" alt="Md. Kaspian Raihan" className="w-full h-full object-cover" />
                   </div>
                 </div>
-                <div className="absolute -top-4 -right-4 bg-white/20 backdrop-blur-sm rounded-lg p-3">
-                  <Star className="w-6 h-6 text-orange-400" />
-                </div>
+                
                 <div className="absolute -bottom-4 -left-4 bg-white/20 backdrop-blur-sm rounded-lg p-3">
                   <Code className="w-6 h-6 text-blue-400" />
                 </div>
