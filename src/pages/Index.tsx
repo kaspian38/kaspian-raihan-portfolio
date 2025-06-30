@@ -288,7 +288,7 @@ const Index = () => {
                   </div>
                   <div>
                     <p className="font-semibold">Email</p>
-                    <p className="text-white/80">kaspian.raihan@example.com</p>
+                    <p className="text-white/80">kaspian.raihan5226@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4 text-white">
@@ -297,7 +297,7 @@ const Index = () => {
                   </div>
                   <div>
                     <p className="font-semibold">Phone</p>
-                    <p className="text-white/80">+880 123-456-7890</p>
+                    <p className="text-white/80">+8801745262631</p>
                   </div>
                 </div>
                 <div className="flex space-x-4 pt-4">
@@ -345,9 +345,7 @@ const Index = () => {
       <footer className="bg-white/10 backdrop-blur-md border-t border-white/20 py-8">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-white/80 mb-4 md:mb-0">
-              © 2024 Md. Kaspian Raihan. All rights reserved.
-            </div>
+            <div className="text-white/80 mb-4 md:mb-0">© 2025 Md. Kaspian Raihan. All rights reserved.</div>
             <div className="flex space-x-6">
               {["Home", "About", "Projects", "Contact"].map(item => <button key={item} onClick={() => scrollToSection(item.toLowerCase())} className="text-white/60 hover:text-white transition-colors duration-300">
                   {item}
