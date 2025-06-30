@@ -198,7 +198,7 @@ const Index = () => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {skills.map((skill, index) => <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer">
-                <CardContent className="p-4 text-center">
+                <CardContent className="p-4 text-center ">
                   <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg mx-auto mb-3 flex items-center justify-center">
                     <Code className="w-6 h-6 text-white" />
                   </div>
@@ -284,7 +284,7 @@ const Index = () => {
               <div className="space-y-4">
                 <div className="flex items-center space-x-4 text-white">
                   <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
-                    <Mail className="w-6 h-6" />
+                    <Mail className="w-6 h-6 bg-violet-500" />
                   </div>
                   <div>
                     <p className="font-semibold">Email</p>
@@ -292,7 +292,7 @@ const Index = () => {
                   </div>
                 </div>
                 <div className="flex items-center space-x-4 text-white">
-                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-lg flex items-center justify-center bg-green-500">
                     <Phone className="w-6 h-6" />
                   </div>
                   <div>
@@ -301,10 +301,10 @@ const Index = () => {
                   </div>
                 </div>
                 <div className="flex space-x-4 pt-4">
-                  <Button variant="outline" size="icon" className="border-white/30 text-white hover:bg-white/10">
+                  <Button variant="outline" size="icon" className="border-white/30 hover:bg-white/10 text-neutral-800">
                     <Github className="w-5 h-5" />
                   </Button>
-                  <Button variant="outline" size="icon" className="border-white/30 text-white hover:bg-white/10">
+                  <Button variant="outline" size="icon" className="border-white/30 hover:bg-white/10 text-green-900">
                     <Linkedin className="w-5 h-5" />
                   </Button>
                 </div>
