@@ -145,8 +145,12 @@ const Index = () => {
             <div className="flex-1 max-w-md">
               <div className="relative">
                 <div className="w-80 h-80 rounded-full bg-gradient-to-br from-orange-400 to-pink-500 p-1">
-                  <div className="w-full h-full rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center">
-                    <User className="w-32 h-32 text-white/80" />
+                  <div className="w-full h-full rounded-full overflow-hidden">
+                    <img 
+                      src="https://i.postimg.cc/KzCJCvfF/245482619-1013790496141550-6785660270570192208-n.jpg" 
+                      alt="Md. Kaspian Raihan"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
                 <div className="absolute -top-4 -right-4 bg-white/20 backdrop-blur-sm rounded-lg p-3">
@@ -171,8 +175,12 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="relative">
-                <div className="w-full h-96 rounded-2xl bg-gradient-to-br from-purple-100 to-blue-100 flex items-center justify-center">
-                  <User className="w-48 h-48 text-purple-300" />
+                <div className="w-full h-96 rounded-2xl overflow-hidden shadow-lg">
+                  <img 
+                    src="https://i.postimg.cc/KzCJCvfF/245482619-1013790496141550-6785660270570192208-n.jpg" 
+                    alt="Md. Kaspian Raihan"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>
