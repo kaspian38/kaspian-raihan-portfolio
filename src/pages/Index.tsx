@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Mail, Phone, Github, Linkedin, ArrowRight, Code, Star, User, Briefcase, Contact } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -6,102 +5,78 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/hooks/use-toast";
-
 const Index = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: ""
   });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
       title: "Message Sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
+      description: "Thank you for your message. I'll get back to you soon."
     });
-    setFormData({ name: "", email: "", message: "" });
+    setFormData({
+      name: "",
+      email: "",
+      message: ""
+    });
   };
-
   const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById(sectionId)?.scrollIntoView({
+      behavior: "smooth"
+    });
   };
-
-  const skills = [
-    "Python", "C", "Java", "HTML/CSS", "JavaScript", "Bootstrap",
-    "TensorFlow", "Django", "React", "Pandas", "scikit-learn",
-    "Software Testing & QA", "Database Management", "AI/ML Development"
-  ];
-
-  const projects = [
-    {
-      title: "Stock Price Prediction Using AI",
-      description: "RNN-based model with sentiment analysis for accurate stock price forecasting",
-      technologies: ["Python", "TensorFlow", "RNN", "NLP"]
-    },
-    {
-      title: "Movie Suggestion Site",
-      description: "Content-based filtering system for personalized movie recommendations",
-      technologies: ["Python", "Django", "Machine Learning"]
-    },
-    {
-      title: "AI-Powered Chatbot",
-      description: "Intelligent conversational AI using natural language processing",
-      technologies: ["NLP", "TensorFlow", "RNN", "Python"]
-    },
-    {
-      title: "Medicine Recommendation Using ML",
-      description: "Classification algorithm for personalized medicine suggestions",
-      technologies: ["Python", "scikit-learn", "Classification"]
-    },
-    {
-      title: "Disease Detection Using ML",
-      description: "Multi-algorithm approach for accurate disease prediction",
-      technologies: ["Decision Trees", "SVM", "Deep Learning"]
-    },
-    {
-      title: "LLM Chatbot",
-      description: "Advanced chatbot powered by GPT-based language models",
-      technologies: ["GPT", "Python", "OpenAI API"]
-    }
-  ];
-
-  const services = [
-    {
-      title: "AI/ML Development",
-      description: "Custom AI and machine learning solutions tailored to your business needs"
-    },
-    {
-      title: "Software Quality Assurance",
-      description: "Comprehensive testing and QA services to ensure software reliability"
-    },
-    {
-      title: "Data Analysis",
-      description: "Advanced data analysis and insights to drive business decisions"
-    },
-    {
-      title: "Custom Software Solutions",
-      description: "End-to-end software development with focus on quality and performance"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-700">
+  const skills = ["Python", "C", "Java", "HTML/CSS", "JavaScript", "Bootstrap", "TensorFlow", "Django", "React", "Pandas", "scikit-learn", "Software Testing & QA", "Database Management", "AI/ML Development"];
+  const projects = [{
+    title: "Stock Price Prediction Using AI",
+    description: "RNN-based model with sentiment analysis for accurate stock price forecasting",
+    technologies: ["Python", "TensorFlow", "RNN", "NLP"]
+  }, {
+    title: "Movie Suggestion Site",
+    description: "Content-based filtering system for personalized movie recommendations",
+    technologies: ["Python", "Django", "Machine Learning"]
+  }, {
+    title: "AI-Powered Chatbot",
+    description: "Intelligent conversational AI using natural language processing",
+    technologies: ["NLP", "TensorFlow", "RNN", "Python"]
+  }, {
+    title: "Medicine Recommendation Using ML",
+    description: "Classification algorithm for personalized medicine suggestions",
+    technologies: ["Python", "scikit-learn", "Classification"]
+  }, {
+    title: "Disease Detection Using ML",
+    description: "Multi-algorithm approach for accurate disease prediction",
+    technologies: ["Decision Trees", "SVM", "Deep Learning"]
+  }, {
+    title: "LLM Chatbot",
+    description: "Advanced chatbot powered by GPT-based language models",
+    technologies: ["GPT", "Python", "OpenAI API"]
+  }];
+  const services = [{
+    title: "AI/ML Development",
+    description: "Custom AI and machine learning solutions tailored to your business needs"
+  }, {
+    title: "Software Quality Assurance",
+    description: "Comprehensive testing and QA services to ensure software reliability"
+  }, {
+    title: "Data Analysis",
+    description: "Advanced data analysis and insights to drive business decisions"
+  }, {
+    title: "Custom Software Solutions",
+    description: "End-to-end software development with focus on quality and performance"
+  }];
+  return <div className="min-h-screen bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-700">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/10 backdrop-blur-md z-50 border-b border-white/20">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <div className="text-white font-bold text-xl">Kaspian</div>
             <div className="hidden md:flex space-x-8">
-              {["Home", "About", "Skills", "Projects", "Services", "Contact"].map((item) => (
-                <button
-                  key={item}
-                  onClick={() => scrollToSection(item.toLowerCase())}
-                  className="text-white/80 hover:text-white transition-colors duration-300"
-                >
+              {["Home", "About", "Skills", "Projects", "Services", "Contact"].map(item => <button key={item} onClick={() => scrollToSection(item.toLowerCase())} className="text-white/80 hover:text-white transition-colors duration-300">
                   {item}
-                </button>
-              ))}
+                </button>)}
             </div>
           </div>
         </div>
@@ -127,17 +102,10 @@ const Index = () => {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  onClick={() => scrollToSection("projects")}
-                  className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105"
-                >
+                <Button onClick={() => scrollToSection("projects")} className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105">
                   View My Work <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-                <Button 
-                  onClick={() => scrollToSection("contact")}
-                  variant="outline" 
-                  className="border-white/30 text-white hover:bg-white/10 px-8 py-3 rounded-full text-lg font-medium transition-all duration-300"
-                >
+                <Button onClick={() => scrollToSection("contact")} variant="outline" className="border-white/30 text-white hover:bg-white/10 px-8 py-3 rounded-full text-lg font-medium transition-all duration-300">
                   Get In Touch
                 </Button>
               </div>
@@ -146,11 +114,7 @@ const Index = () => {
               <div className="relative">
                 <div className="w-80 h-80 rounded-full bg-gradient-to-br from-orange-400 to-pink-500 p-1">
                   <div className="w-full h-full rounded-full overflow-hidden">
-                    <img 
-                      src="https://i.postimg.cc/KzCJCvfF/245482619-1013790496141550-6785660270570192208-n.jpg" 
-                      alt="Md. Kaspian Raihan"
-                      className="w-full h-full object-cover"
-                    />
+                    <img src="https://i.postimg.cc/KzCJCvfF/245482619-1013790496141550-6785660270570192208-n.jpg" alt="Md. Kaspian Raihan" className="w-full h-full object-cover" />
                   </div>
                 </div>
                 <div className="absolute -top-4 -right-4 bg-white/20 backdrop-blur-sm rounded-lg p-3">
@@ -176,11 +140,7 @@ const Index = () => {
             <div>
               <div className="relative">
                 <div className="w-full h-96 rounded-2xl overflow-hidden shadow-lg">
-                  <img 
-                    src="https://i.postimg.cc/KzCJCvfF/245482619-1013790496141550-6785660270570192208-n.jpg" 
-                    alt="Md. Kaspian Raihan"
-                    className="w-full h-full object-cover"
-                  />
+                  <img alt="Md. Kaspian Raihan" className="w-full h-full object-cover" src="/lovable-uploads/24ff7aca-f609-485f-a025-4fdca64a6e70.png" />
                 </div>
               </div>
             </div>
@@ -237,16 +197,14 @@ const Index = () => {
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {skills.map((skill, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer">
+            {skills.map((skill, index) => <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer">
                 <CardContent className="p-4 text-center">
                   <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg mx-auto mb-3 flex items-center justify-center">
                     <Code className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="font-semibold text-gray-800 text-sm">{skill}</h3>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -262,8 +220,7 @@ const Index = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer border-0 shadow-lg">
+            {projects.map((project, index) => <Card key={index} className="hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer border-0 shadow-lg">
                 <CardContent className="p-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg mb-4 flex items-center justify-center">
                     <Code className="w-6 h-6 text-white" />
@@ -271,15 +228,12 @@ const Index = () => {
                   <h3 className="font-bold text-gray-800 mb-3 text-lg">{project.title}</h3>
                   <p className="text-gray-600 mb-4 text-sm leading-relaxed">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech, techIndex) => (
-                      <span key={techIndex} className="text-xs bg-purple-100 text-purple-700 px-3 py-1 rounded-full">
+                    {project.technologies.map((tech, techIndex) => <span key={techIndex} className="text-xs bg-purple-100 text-purple-700 px-3 py-1 rounded-full">
                         {tech}
-                      </span>
-                    ))}
+                      </span>)}
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -295,8 +249,7 @@ const Index = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer text-center border-0 shadow-lg">
+            {services.map((service, index) => <Card key={index} className="hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer text-center border-0 shadow-lg">
                 <CardContent className="p-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <Briefcase className="w-8 h-8 text-white" />
@@ -304,8 +257,7 @@ const Index = () => {
                   <h3 className="font-bold text-gray-800 mb-3">{service.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -362,32 +314,22 @@ const Index = () => {
               <CardContent className="p-8">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <Input
-                      placeholder="Your Name"
-                      value={formData.name}
-                      onChange={(e) => setFormData({...formData, name: e.target.value})}
-                      className="bg-white/10 border-white/30 text-white placeholder:text-white/60"
-                      required
-                    />
+                    <Input placeholder="Your Name" value={formData.name} onChange={e => setFormData({
+                    ...formData,
+                    name: e.target.value
+                  })} className="bg-white/10 border-white/30 text-white placeholder:text-white/60" required />
                   </div>
                   <div>
-                    <Input
-                      type="email"
-                      placeholder="Your Email"
-                      value={formData.email}
-                      onChange={(e) => setFormData({...formData, email: e.target.value})}
-                      className="bg-white/10 border-white/30 text-white placeholder:text-white/60"
-                      required
-                    />
+                    <Input type="email" placeholder="Your Email" value={formData.email} onChange={e => setFormData({
+                    ...formData,
+                    email: e.target.value
+                  })} className="bg-white/10 border-white/30 text-white placeholder:text-white/60" required />
                   </div>
                   <div>
-                    <Textarea
-                      placeholder="Your Message"
-                      value={formData.message}
-                      onChange={(e) => setFormData({...formData, message: e.target.value})}
-                      className="bg-white/10 border-white/30 text-white placeholder:text-white/60 min-h-[120px]"
-                      required
-                    />
+                    <Textarea placeholder="Your Message" value={formData.message} onChange={e => setFormData({
+                    ...formData,
+                    message: e.target.value
+                  })} className="bg-white/10 border-white/30 text-white placeholder:text-white/60 min-h-[120px]" required />
                   </div>
                   <Button type="submit" className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-lg transition-all duration-300 hover:scale-105">
                     Send Message <ArrowRight className="ml-2 h-5 w-5" />
@@ -407,21 +349,13 @@ const Index = () => {
               © 2024 Md. Kaspian Raihan. All rights reserved.
             </div>
             <div className="flex space-x-6">
-              {["Home", "About", "Projects", "Contact"].map((item) => (
-                <button
-                  key={item}
-                  onClick={() => scrollToSection(item.toLowerCase())}
-                  className="text-white/60 hover:text-white transition-colors duration-300"
-                >
+              {["Home", "About", "Projects", "Contact"].map(item => <button key={item} onClick={() => scrollToSection(item.toLowerCase())} className="text-white/60 hover:text-white transition-colors duration-300">
                   {item}
-                </button>
-              ))}
+                </button>)}
             </div>
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
